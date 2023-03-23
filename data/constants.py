@@ -1,0 +1,3 @@
+MIN_LAT = -70
+MAX_LAT = 70
+BLOCK_KM = 400
