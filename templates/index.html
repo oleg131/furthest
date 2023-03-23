@@ -6,8 +6,6 @@
 
     <title>Furthest</title>
 
-    <link rel="stylesheet" href="/static/main.css" />
-
     <link
       rel="icon"
       href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌎</text></svg>"
@@ -30,11 +28,7 @@
       href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
     />
 
-    <style>
-      html {
-        overflow-y: auto;
-      }
-    </style>
+    <link rel="stylesheet" href="/static/main.css" />
   </head>
 
   <body>
@@ -142,9 +136,7 @@
           return;
         }
 
-        // mainEl.style.display = "none";
         loadingEl.style.display = "flex";
-        // overlayEl.style.display = "block";
 
         geojsonLayerGroup.clearLayers();
         layerGroup.clearLayers();
@@ -184,14 +176,7 @@
         };
         legend.addTo(map);
 
-        // for (let index = 0; index < result.grid.length; index++) {
-        //   const xy = result.grid[index];
-        //   L.circleMarker(xy.reverse()).addTo(map);
-        // }
-
-        // mainEl.style.display = "block";
         loadingEl.style.display = "none";
-        // overlayEl.style.display = "none";
       }
 
       function hide() {

@@ -60,11 +60,7 @@ def get_data_from_grid(lon, lat):
     cmap = mpl.colors.LinearSegmentedColormap.from_list(
         'custom', colors=CMAP.colors, N=N_COLORS)
 
-    # bins = stats.mstats.mquantiles(z, np.linspace(0, 1, N_COLORS + 1))
-    # bins = np.histogram(z, N_COLORS)[1]
-    # bins = get_bins(vmax)
     bins = np.concatenate([np.arange(0, N_COLORS * 6, 6), [vmax]])
-    # bins = np.concatenate([[0, 6, 12, 16, 20], np.linspace(24, vmax, 6)])
 
     norm = mpl.colors.BoundaryNorm(bins, N_COLORS)
     sm = mpl.cm.ScalarMappable(norm=norm, cmap=cmap)
